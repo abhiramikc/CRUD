@@ -1,0 +1,136 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+    <IsPackable>false</IsPackable>
+    <SpaRoot>StudentFront\</SpaRoot>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
+
+    <!-- Set this to true if you enable server-side prerendering -->
+    <BuildServerSideRenderer>false</BuildServerSideRenderer>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="4.1.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+    <PackageReference Include="MySql.Data" Version="8.0.23" />
+    <PackageReference Include="Nancy" Version="2.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Content Remove="$(SpaRoot)**" />
+    <None Remove="$(SpaRoot)**" />
+    <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="StudentFront\src\app\models\std.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\.git\COMMIT_EDITMSG" />
+    <None Include="Pages\.git\config" />
+    <None Include="Pages\.git\description" />
+    <None Include="Pages\.git\HEAD" />
+    <None Include="Pages\.git\hooks\applypatch-msg.sample" />
+    <None Include="Pages\.git\hooks\commit-msg.sample" />
+    <None Include="Pages\.git\hooks\fsmonitor-watchman.sample" />
+    <None Include="Pages\.git\hooks\post-update.sample" />
+    <None Include="Pages\.git\hooks\pre-applypatch.sample" />
+    <None Include="Pages\.git\hooks\pre-commit.sample" />
+    <None Include="Pages\.git\hooks\pre-merge-commit.sample" />
+    <None Include="Pages\.git\hooks\pre-push.sample" />
+    <None Include="Pages\.git\hooks\pre-rebase.sample" />
+    <None Include="Pages\.git\hooks\pre-receive.sample" />
+    <None Include="Pages\.git\hooks\prepare-commit-msg.sample" />
+    <None Include="Pages\.git\hooks\push-to-checkout.sample" />
+    <None Include="Pages\.git\hooks\update.sample" />
+    <None Include="Pages\.git\index" />
+    <None Include="Pages\.git\info\exclude" />
+    <None Include="Pages\.git\logs\HEAD" />
+    <None Include="Pages\.git\logs\refs\heads\master" />
+    <None Include="Pages\.git\objects\02\972627f8df364102ce4ede71c8bd5f3660e1d8" />
+    <None Include="Pages\.git\objects\07\82539c045b919bdbb1fae4bb2448613cb3c57d" />
+    <None Include="Pages\.git\objects\09\2345b02e807773164dba19f2b4d1f4ab869f67" />
+    <None Include="Pages\.git\objects\0a\c18eb8831db5c307ccba22f262d1b4ce41eb62" />
+    <None Include="Pages\.git\objects\13\997ac2003e01dc7006141440e955c5f8dc0ce9" />
+    <None Include="Pages\.git\objects\27\7c8eba0242d0522fd48318c14a831926ffe1f5" />
+    <None Include="Pages\.git\objects\33\c20fd3d9934bcae544c003298b71e6dedb6bdf" />
+    <None Include="Pages\.git\objects\36\12073bc31cd4c1f5d6cbb00318521e9a61bd8a" />
+    <None Include="Pages\.git\objects\36\1e7f0cdfa1f5bbb15af4ad0ee4cc11e9957c66" />
+    <None Include="Pages\.git\objects\42\7441dc9308514d0e294ed878a168972f3a4c46" />
+    <None Include="Pages\.git\objects\4c\47642f89b958ff7f3c8ff9aba7766117e086a4" />
+    <None Include="Pages\.git\objects\50\193eb0f283fa7064c483c2d85a07c2190cceb5" />
+    <None Include="Pages\.git\objects\53\d50f77a92cc83e1ffa4e60cca92989b7af8fe4" />
+    <None Include="Pages\.git\objects\59\d9a3a3e73ffc640517ef488f6f89d6270195d1" />
+    <None Include="Pages\.git\objects\7b\4f817adb754769ca126a939d48ac4b0850489d" />
+    <None Include="Pages\.git\objects\82\d91dc4a4de57f380b66c59cdd16ff6cd5798e4" />
+    <None Include="Pages\.git\objects\86\4ee5b153f7bd20100b1c8e316c23637754c926" />
+    <None Include="Pages\.git\objects\86\d943a9b2e8f3bb69fbe37fd8363962646b1d92" />
+    <None Include="Pages\.git\objects\90\d4ee0072ce3fc41812f8af910219f9eea3c3de" />
+    <None Include="Pages\.git\objects\94\a24fe1e0e50466983817942286c5d1103f5092" />
+    <None Include="Pages\.git\objects\99\7406ad22c29aae95893fb3d666c30258a09537" />
+    <None Include="Pages\.git\objects\9d\fd91973f32d70297735fc0dd9703f39ef6fc88" />
+    <None Include="Pages\.git\objects\a9\eaedc7492aa5ab5ed5a5825e1134bb797b8a00" />
+    <None Include="Pages\.git\objects\aa\852fb9309ce276fe20f73696f0c052ca66dcca" />
+    <None Include="Pages\.git\objects\af\bcd5773cd3351d5d3e782597fdc521a8560ccf" />
+    <None Include="Pages\.git\objects\b1\c6c96a9de8f091f39b3b8feb7e29cfcfb1ed81" />
+    <None Include="Pages\.git\objects\b4\9ddaa4c84ac43db9f36e656f98de8a1f30c9d6" />
+    <None Include="Pages\.git\objects\b8\e80a73fcf6ec93d190701587bcbaca346d5d71" />
+    <None Include="Pages\.git\objects\ba\05a0593b855d6c1358f236f3ec9e7d2e598aca" />
+    <None Include="Pages\.git\objects\c7\b673cf44b388e9989fe908b78d7d73cd2e1409" />
+    <None Include="Pages\.git\objects\c8\c6359728da5b5af319199f05301a281cc2cf60" />
+    <None Include="Pages\.git\objects\c9\c85ab9a2053cd2b004bb616915c57b362b7dcc" />
+    <None Include="Pages\.git\objects\d5\64d0bc3dd917926892c55e3706cc116d5b165e" />
+    <None Include="Pages\.git\objects\d5\f67bd91069c7a322dab7b1ebf76f3a4944cc7f" />
+    <None Include="Pages\.git\objects\df\fde7968c4865b6dbe0d0b6d7df392d475bfe29" />
+    <None Include="Pages\.git\objects\e4\8d8c109d668d9b5c5f25e0c2831bbe48d3cc1d" />
+    <None Include="Pages\.git\objects\e5\98c10308a5af42f4c8d08687b7c5c895d888bf" />
+    <None Include="Pages\.git\objects\e6\9de29bb2d1d6434b8b29ae775ad8c2e48c5391" />
+    <None Include="Pages\.git\refs\heads\master" />
+  </ItemGroup>
+
+  <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
+    <!-- Ensure Node.js is installed -->
+    <Exec Command="node --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+    <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+  </Target>
+
+  <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
+    <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build -- --prod" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build:ssr -- --prod" Condition=" '$(BuildServerSideRenderer)' == 'true' " />
+
+    <!-- Include the newly-built files in the publish output -->
+    <ItemGroup>
+      <DistFiles Include="$(SpaRoot)dist\**; $(SpaRoot)dist-server\**" />
+      <DistFiles Include="$(SpaRoot)node_modules\**" Condition="'$(BuildServerSideRenderer)' == 'true'" />
+      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+        <RelativePath>%(DistFiles.Identity)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+  </Target>
+
+</Project>

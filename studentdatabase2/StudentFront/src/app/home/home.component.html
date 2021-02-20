@@ -1,0 +1,24 @@
+<p>home works!</p>
+<hr />
+<hr />
+<hr />
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>name</th>
+      <th>department</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of data2">
+      <th>{{item.stuId}}</th>
+      <td>{{item.name}}</td>
+      <td>{{item.department}}</td>
+      <td>
+        <button class="btn btn-primary" type="button">edit</button>&nbsp;&nbsp;
+        <button class="btn btn-danger" type="button"(click)="deleteData(item.stuId)">delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
